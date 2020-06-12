@@ -1,3 +1,3 @@
 My SOC Enginner Intern --
 
-+ install ELK
++ [install ELK](./elk_installation.md)
