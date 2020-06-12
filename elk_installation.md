@@ -5,7 +5,7 @@
 > ## Installation of **Logstash**
 > + check your Java version, `java --version` 
 >   + if java exists , _pass_
->   + else , `apt search java`, `sudo apt install {java---}`
+>   + else , `apt search java`, `sudo apt install default-jre{java---}`
 
 > + Import the Elastic PGP Keyedit
 >   + Download and install the public signing key: **4609 5ACC 8548 582C 1A26 99A9 D27D 666C D88E 42B4**<br>
@@ -18,18 +18,18 @@
 `echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list`
 
 > + You can install the **Elasticsearch** Debian package with:
->   + `sudo apt-get update && sudo apt-get install kibna`
+>   + `sudo apt-get update && sudo apt-get install logstash`
 
 > ## Enable automatic creation of system indices.
 > + Check **systemd**<br>
 `ps -p 1`
 > + Kibana **enable**<br>
 `sudo /bin/systemctl daemon-reload`<br>
-`sudo /bin/systemctl enable kibana.service`
+`sudo /bin/systemctl enable logstash.service`
 > + ES *start_stop*<br>
-`sudo systemctl start kibana.service`<br>
-`sudo systemctl stop kibana.service`<br>
-`sudo systemctl status kibana.service`
+`sudo systemctl start logstash.service`<br>
+`sudo systemctl stop logstash.service`<br>
+`sudo systemctl status logstash.service`
 
 
 
@@ -59,7 +59,7 @@
 
 ---
 # K
-> ## Installation of **KIBANA**
+> ## Installation of **KIBANA** *Kibina Installation may take <b>some time</b>*
 > + Import the Elastic PGP Keyedit
 >   + Download and install the public signing key: **4609 5ACC 8548 582C 1A26 99A9 D27D 666C D88E 42B4**<br>
 `wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -`
@@ -69,7 +69,7 @@
 >   + Save the repository definition to */etc/apt/sources.list.d/elastic-7.x.list:*<br>
 `echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list`
 > + You can install the **Elasticsearch** Debian package with:
->   + `sudo apt-get update && sudo apt-get install kibna`
+>   + `sudo apt-get update && sudo apt-get install kibana`
 
 > ## Enable automatic creation of system indices.
 > + Check **systemd**<br>
